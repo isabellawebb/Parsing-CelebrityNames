@@ -2,10 +2,10 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Write a description of class CelebrityNames here.
+ * CelebrityNames Parsing
  * 
- * @author Roger Jaffe
- * @version 2015-01-19
+ * @author Isabella Webb
+ * @version 2015-01-21
  */
 public class CelebrityNames
 {
@@ -30,8 +30,10 @@ public class CelebrityNames
         { 
             Scanner sc = new Scanner( text[j] );
             String firstName = sc.next( );
+            String middleName = sc.next( );
             String lastName = sc.next( );
-            reversedName[j] = lastName + ", " + firstName;
+            String birthday = sc.next( );
+            reversedName[j] = lastName + ", " + firstName + " " + middleName + " -- " + birthday;
         } 
         
         Arrays.sort(reversedName);
